@@ -1,3 +1,17 @@
-{% include 'lucid_diary/index_header.html' %}
+{% extends 'lucid_diary/base.html' %}
 
-{% include 'lucid_diary/index_main.html' %}
+{% block content %}
+		<header class="bg-dark py-5">
+            <div class="container px-4 px-lg-5 my-5">
+                <div class="text-center text-white">
+                    <h1 class="display-4 fw-bolder">Lucid Diary</h1>
+                    <p class="lead fw-normal text-white-50 mb-0"><span class="getstart">Get started</span></p>
+                </div>
+            </div>
+        </header>
+        <!-- Section-->
+        <section class="py-5 lucid-info">
+            <!-- change this text -->
+            A lucid dream is a type of sleep in which a person understands that he is in a dream and can control what is happening: his actions, the behavior of others and the laws that the world inside the dream obeys. At the same time, a person retains memories of real life and personality characteristics.    
+        </section>
+{% endblock %}
