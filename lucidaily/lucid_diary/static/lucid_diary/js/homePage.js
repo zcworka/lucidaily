@@ -7,7 +7,7 @@ const getRandom = (min, max) => {
     return Math.floor(Math.random() * (max - min) + min)
 }
 
- const animText = () => {
+ const animText = (text_class) => {
 
  	let colors = [
  		'rgb(255, 0, 0)',
@@ -20,7 +20,7 @@ const getRandom = (min, max) => {
 	
  	randomColor = colors[getRandom(0, colors.length)]
 
-	if($('.getstart').css('color') == randomColor) {
+	if($(text_class).css('color') == randomColor) {
 		
 		currentIndex = randomColor.indexOf(randomColor)
 
@@ -31,11 +31,11 @@ const getRandom = (min, max) => {
 		}
 
 	}
-	$('.getstart').css('color', randomColor)
+	$(text_class).css('color', randomColor)
 
 }
 
-setInterval(animText, 1000)
+setInterval(() => {animText('.getstart')}, 1000)
 
 // Messages
 
