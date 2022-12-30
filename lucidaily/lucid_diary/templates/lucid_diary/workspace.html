@@ -1,0 +1,26 @@
+{% extends 'lucid_diary/base.html' %}
+{% load static %}
+
+{% block title %}
+Workspace
+{% endblock %}
+
+{% block additional_urls %}
+
+<link href="{% static 'lucid_diary/css/workspace_styles.css' %}" rel="stylesheet" />
+<script src="{% static 'lucid_diary/js/workspace.js' %}"></script>
+
+{% endblock %}
+
+{% block content %}
+<div class="noteslist_block">
+	{% include 'lucid_diary/workspace_notelist.html' %}	
+</div>
+
+<!-- {% for n in notes %}
+{{ n.content }}
+{% endfor %} -->
+
+
+
+{% endblock %}

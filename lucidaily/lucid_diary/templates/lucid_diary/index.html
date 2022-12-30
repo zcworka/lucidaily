@@ -1,11 +1,20 @@
 {% extends 'lucid_diary/base.html' %}
 
+{% block title %}
+Home
+{% endblock %}
+
 {% block content %}
 		<header class="bg-dark py-5">
             <div class="container px-4 px-lg-5 my-5">
                 <div class="text-center text-white">
                     <h1 class="display-4 fw-bolder">Lucid Diary</h1>
-                    <p class="lead fw-normal text-white-50 mb-0"><span class="getstart">Get started</span></p>
+                    {% if request.user.is_authenticated %}
+                        <p class="lead fw-normal text-white-50 mb-0"><a style='text-decoration: none' href='{% url "workspace" %}'><span class="getstart">Open Diary</span></a></p>
+                    {% else %}
+                        <p class="lead fw-normal text-white-50 mb-0"><a style='text-decoration: none' href='{% url "login" %}'><span class="getstart">Get started</span></a></p>
+                    {% endif %}
+                    
                 </div>
             </div>
         </header>

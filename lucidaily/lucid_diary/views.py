@@ -25,6 +25,9 @@ def login(request):
 def signup(request):
 	return render(request, 'lucid_diary/signup.html')
 
+def workspace(request):
+	return render(request, 'lucid_diary/workspace.html', {'notes': Note.objects.filter(user_id=request.user.pk)})
+
 
 
 def handle404(request, exception):

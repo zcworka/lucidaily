@@ -1,0 +1,32 @@
+<div class="padding-wrapper">
+<div class="container d-flex justify-content-center list-block mainblock-block">
+
+		
+
+		<ul class="list-group mt-5 text-white ul-list" id="list-begin">  
+		  {% for note in notes %}
+
+		  <li class="list-group-item">
+		  	 <!-- d-flex justify-content-between align-content-center -->
+		  	<div class="d-flex flex-row">
+		  		<img class="el-img" src="https://cdn-icons-png.flaticon.com/128/9262/9262356.png" width="40" />
+		  		<div class="ml-2">
+		  			<h6 class="mb-0">{{ note.title }}</h6>
+		  			<div class="about">
+		  				<span>{{ note.time_update }}</span>
+		  				{% if note.is_lucid %}
+		  					<span class='text-lucid'>Lucid</span>
+		  				{% else %}
+		  					<span>Common</span>
+		  				{% endif %}
+		  			</div>
+		  		</div>
+		  	</div>
+		  </li>
+
+		{% endfor %}
+		</ul>
+
+		</div>
+		
+		</div>
