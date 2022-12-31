@@ -1,3 +1,5 @@
+.hidden { width:0;height: 0;margin: 0;padding: 0; display: none; }
+
 .noteslist_block {
      background-color: #212225;
      width: 33%;
@@ -5,6 +7,12 @@
 
      padding-top: 50px;
      border-bottom-right-radius: 5%;
+}
+
+.note-button {
+     background: transparent;
+     border: none !important;
+     font-size:0;
 }
 
 .el-img {

@@ -26,7 +26,13 @@ def signup(request):
 	return render(request, 'lucid_diary/signup.html')
 
 def workspace(request):
+	for n in Note.objects.filter(user_id=request.user.pk):
+		print(n.time_update)
 	return render(request, 'lucid_diary/workspace.html', {'notes': Note.objects.filter(user_id=request.user.pk)})
+
+def edit(request):
+	if request.method == 'POST':
+		return render(request, 'lucid_diary/edit.html', {'note': Note.objects.get(slug=request.POST.get('safer'))})
 
 
 

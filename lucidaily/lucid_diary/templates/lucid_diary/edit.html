@@ -1,0 +1,14 @@
+{% extends 'lucid_diary/base.html' %}
+
+{% block title %}
+Edit
+{% endblock %}
+
+{% block content %}
+
+{% if request.POST %}
+{{ note.content }}
+{% endif %}
+
+
+{% endblock %}

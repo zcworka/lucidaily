@@ -8,4 +8,5 @@ urlpatterns = [
 	path('profile', profile, name='profile'),
 	path('logout_user', logout_user, name='logout_user'),
 	path('workspace', workspace, name='workspace'),
+	path('edit', edit, name='edit'),
 ] 
