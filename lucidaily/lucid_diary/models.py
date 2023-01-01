@@ -14,6 +14,6 @@ class Note(models.Model):
 
 	def save(self,  *args, **kwargs):
 
-		self.slug = hashlib.sha256(b"Nobody inspects the spammish repetition").hexdigest()
+		self.slug = hashlib.sha256(self.title.encode()).hexdigest()
 
 		return super(Note, self).save(*args, **kwargs)

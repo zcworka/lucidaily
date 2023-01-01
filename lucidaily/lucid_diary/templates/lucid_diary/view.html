@@ -1,0 +1,13 @@
+<div class="title-block">
+	<span class="title-span">{{ note.title }}</span>
+	{% if note.is_lucid %}
+	<span class="lucid-span">Lucid</span>
+	{% else %}
+	<span class="no-lucid-span">Common</span> 
+	<!-- now no display -->
+	{% endif %}
+</div>
+
+<div class="note-block">
+	<span class="content-span">{{ note.content }}</span><br>
+</div>

@@ -9,4 +9,5 @@ urlpatterns = [
 	path('logout_user', logout_user, name='logout_user'),
 	path('workspace', workspace, name='workspace'),
 	path('edit', edit, name='edit'),
+	path('workspace/view', view, name='view'),
 ] 

@@ -11,6 +11,8 @@ from django.views.generic import ListView, DetailView, CreateView
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.contrib.auth.forms import AuthenticationForm
 from django.contrib.auth.views import LoginView
+from django.views.decorators.csrf import csrf_protect
+from django.views.decorators.csrf import csrf_exempt
 
 from .forms import *
 from .models import *
@@ -33,6 +35,14 @@ def workspace(request):
 def edit(request):
 	if request.method == 'POST':
 		return render(request, 'lucid_diary/edit.html', {'note': Note.objects.get(slug=request.POST.get('safer'))})
+
+@csrf_exempt
+def view(request):
+	if request.method == 'POST':
+		print('====', request.POST.get('safer'), '=====', sep='\n')
+		return render(request, 'lucid_diary/view.html', {'note': Note.objects.get(slug=request.POST.get('safer'))})
+	else:
+		return HttpResponse("000")
 
 
 

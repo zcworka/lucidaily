@@ -6,8 +6,7 @@
 		<ul class="list-group mt-5 text-white ul-list" id="list-begin">  
 		  {% for note in notes %}
 		  <li class="list-group-item">
-		  	<form class="hidden" method='post' action="edit">
-		  	{% csrf_token %}
+		  	<form class="hidden" method='post' action='#'>
 		  	<input class="hidden" type="text" name="safer" value="{{ note.slug }}">
 		  </form>
 		  	<div class="d-flex flex-row note-item">
@@ -25,7 +24,7 @@
 		  		</div>
 		  	</div>
 		  </li>
-		  </form>
+		  <!-- </form> -->
 		{% endfor %}
 		</ul>
 

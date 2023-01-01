@@ -5,7 +5,7 @@
      width: 33%;
      height: 66%;
 
-     padding-top: 50px;
+     padding-top: 7px;
      border-bottom-right-radius: 5%;
 }
 
@@ -20,8 +20,9 @@
 }
 
 .list-group{
-	width: 400px;
+     width: 400px;
 }
+
 
 .list-block {
      padding-bottom: 13%;
@@ -33,39 +34,39 @@
 }
 
 .list-group-item{
-	margin-top: 10px;
-	border-radius: none; 
-	background: #5E35B1;
-	cursor: pointer;
-	transition: all 0.3s ease-in-out;
+     margin-top: 10px;
+     border-radius: none; 
+     background: #5E35B1;
+     cursor: pointer;
+     transition: all 0.3s ease-in-out;
      color: white;
 }
 
 .list-group-item:hover{
-	transform: scaleX(1.1);
+     transform: scaleX(1.1);
 }
 
 
 
 .check{
-	opacity: 0;
-	transition: all 0.6s ease-in-out;
+     opacity: 0;
+     transition: all 0.6s ease-in-out;
 }
 
 .list-group-item:hover .check {
-	opacity: 1;
+     opacity: 1;
 
 }
 
 .about span{
-	font-size: 12px;
-	margin-right: 10px;
+     font-size: 12px;
+     margin-right: 10px;
 
 }
 
 input[type=checkbox] {
          position: relative;
-	       cursor: pointer;
+            cursor: pointer;
     }
     input[type=checkbox]:before {
          content: "";
@@ -99,6 +100,65 @@ input[type=checkbox] {
 
 
   .mainblock-block {
-     height: 90%;
+     height: 23em;
      overflow: scroll;
   }
+
+.noteslist_block > :last-child {
+     padding-bottom: 5%;
+     scroll-padding-bottom: 40px;
+}
+
+  .note-view {
+     width: 60%;
+     height: 28em;
+     margin-left: 5%;
+     background-color: red;
+     display: inline-block;
+  }
+
+  .grid-workspace {
+     display: flex;
+
+  }
+
+
+
+.note-view > :last-child {
+    margin-bottom: 30em;
+}
+
+.note-view {
+     background-color: #212225;
+     padding: 20px;
+}
+
+
+.title-block {
+     margin-bottom: 20px;
+}
+
+.title-span {
+     color: white;
+     font-size: 30px;
+     padding-left: 30px;
+  }
+
+.lucid-span {
+     color: white;
+     font-size: 25px;
+     padding-left: 30px;
+     transition: 0.6s linear;
+  }
+
+
+.note-block {
+     overflow: scroll;
+     font-size: 17px;
+     scroll-padding-bottom: 17px;
+     height: 80%;
+}
+
+.content-span {
+     color: white;
+}
