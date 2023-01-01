@@ -1,3 +1,5 @@
+{% load user_check %}
+
 <div class="padding-wrapper">
 <div class="container d-flex justify-content-center list-block mainblock-block">
 
@@ -5,29 +7,46 @@
 
 		<ul class="list-group mt-5 text-white ul-list" id="list-begin">  
 		  {% for note in notes %}
-		  <li class="list-group-item">
-		  	<form class="hidden" method='post' action='#'>
-		  	<input class="hidden" type="text" name="safer" value="{{ note.slug }}">
-		  </form>
-		  	<div class="d-flex flex-row note-item">
-		  		<img class="el-img" src="https://cdn-icons-png.flaticon.com/128/9262/9262356.png" width="40" />
-		  		<div class="ml-2">
-		  			<h6 class="mb-0">{{ note.title }}</h6>
-		  			<div class="about">
-		  				<span>{{ note.time_update }}</span>
-		  				{% if note.is_lucid %}
-		  					<span class='text-lucid'>Lucid</span>
-		  				{% else %}
-		  					<span>Common</span>
-		  				{% endif %}
-		  			</div>
-		  		</div>
-		  	</div>
-		  </li>
-		  <!-- </form> -->
+
+		  	{% user_check as valid_user %}
+		  	{% if valid_user %}
+				  	
+				  <li class="list-group-item">
+				  	<form class="hidden" method='post' action='#'>
+				  	<input class="hidden" type="text" name="safer" value="{{ note.slug }}">
+				  </form>
+				  	<div class="d-flex flex-row note-item">
+				  		<img class="el-img" src="https://cdn-icons-png.flaticon.com/128/9262/9262356.png" width="40" />
+				  		<div class="ml-2">
+				  			<h6 class="mb-0">{{ note.title }}</h6>
+
+				  			<div class="about">
+				  				<span>{{ note.time_update }}</span>
+				  				{% if note.is_lucid %}
+				  					<span class='text-lucid'>Lucid</span>
+				  				{% else %}
+				  					<span>Common</span>
+				  				{% endif %}
+				  			</div>
+				  		</div>
+				  	</div>
+				  </li>
+
+			{% endif %}
 		{% endfor %}
 		</ul>
 
+
 		</div>
-		
+
+		<div class="create-block">
+			<button
+				class="create-button"
+				onclick="location.href='{% url 'edit' %}'"
+			>
+				Create note
+			</button>
 		</div>
+
+		</div>
+

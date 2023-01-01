@@ -33,8 +33,7 @@ def workspace(request):
 	return render(request, 'lucid_diary/workspace.html', {'notes': Note.objects.filter(user_id=request.user.pk)})
 
 def edit(request):
-	if request.method == 'POST':
-		return render(request, 'lucid_diary/edit.html', {'note': Note.objects.get(slug=request.POST.get('safer'))})
+	return render(request, 'lucid_diary/edit.html')
 
 @csrf_exempt
 def view(request):

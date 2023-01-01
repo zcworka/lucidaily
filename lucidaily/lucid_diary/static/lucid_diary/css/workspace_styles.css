@@ -94,12 +94,12 @@ input[type=checkbox] {
     position: absolute;
     top: 2px;
     left: 6px;
-   }
+}
 
   input[type="checkbox"]:checked + .check { opacity: 1; }
 
 
-  .mainblock-block {
+.mainblock-block {
      height: 23em;
      overflow: scroll;
   }
@@ -112,14 +112,13 @@ input[type=checkbox] {
   .note-view {
      width: 60%;
      height: 28em;
-     margin-left: 5%;
+     margin-left: 4%;
      background-color: red;
      display: inline-block;
   }
 
   .grid-workspace {
      display: flex;
-
   }
 
 
@@ -161,4 +160,19 @@ input[type=checkbox] {
 
 .content-span {
      color: white;
+}
+
+.create-block {
+     
+}
+
+.create-button {
+     border-radius: 6%;
+     background-color: #333;
+     border: none;
+     color: white;
+     margin-top: 5%;
+     margin-left: 5%;
+     display: inline-block;
+     width: calc(100% - 3em);
 }

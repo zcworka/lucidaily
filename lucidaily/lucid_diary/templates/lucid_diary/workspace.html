@@ -1,6 +1,7 @@
 {% extends 'lucid_diary/base.html' %}
 {% load static %}
 
+
 {% block title %}
 Workspace
 {% endblock %}
@@ -15,17 +16,21 @@ Workspace
 
 {% block content %}
 <div class="grid-workspace">
-
 	<div class="noteslist_block">
-		{% include 'lucid_diary/workspace_notelist.html' %}	
+		{% include 'lucid_diary/workspace_notelist.html' %}
+		
 	</div>
 
+	
+
 	<div class="note-view">
-
+		<span><pre style="color:white;font-size: 30px;">	Choose note at left bar</pre></span>
 	</div>	
-
-
 </div>
+
+
+
+
 
 
 

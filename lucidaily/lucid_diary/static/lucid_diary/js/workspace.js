@@ -1,9 +1,9 @@
-
-
+// decoration
 
 setInterval(() => {animText('.text-lucid')}, 1000)
 setInterval(() => {animText('.lucid-span')}, 1000)
 
+// note list logic
 
 $(".ul-list").ready(() => {
 	window.location.assign("#list-begin")
@@ -12,8 +12,6 @@ $(".ul-list").ready(() => {
 $(".ul-list").ready(() => {
 	$('.list-group-item').click(function() {
 		let form = $(this).find('form')
-		console.log(1)
-		// form.submit()
 
 		$.ajax({
 			type: "POST",
@@ -29,4 +27,14 @@ $(".ul-list").ready(() => {
 	})
 })
 
+// create note
+
+$('.create-button').ready(() => {
+	create_button = $('.create-button')
+
+	create_button.click(function() {
+		
+	})
+
+})
 
